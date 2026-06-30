@@ -9,11 +9,11 @@ public class PostmanEchoTest {
     void shouldEchoPostData() {
          given()
                 .baseUri("https://postman-echo.com")
-                .body("TRUST ME")
+                .body("Good evening")
                 .when()
                 .post("/post")
                 .then()
                 .statusCode(200)
-                 .body("data", equalTo("data"));
+                 .body("data", equalTo("Good evening"));
     }
 }
